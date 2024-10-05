@@ -18,7 +18,7 @@ const address = "0x6B175474E89094C44Da98b954EedeAC495271d0F"; // DAI Contract
 const contract = new ethers.Contract(address, ERC20_ABI, provider);
 
 const main = async () => {
-  const block = await provider.getBlockNumber();
+  const block = await provider.getBlockNumber(); //returns the latest block number
 
   const transferEvents = await contract.queryFilter(
     "Transfer",
